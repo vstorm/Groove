@@ -16,7 +16,7 @@ class Widget(QtGui.QWidget,fm_ui.Ui_Form):
         
     def initUi(self):
         self.setupUi(self)
-        http.client.HTTPConnection.debuglevel = 1
+#         http.client.HTTPConnection.debuglevel = 1
         url = '1'
         cookiefile = "cookies.txt"
         collectChannel = {}
@@ -78,7 +78,6 @@ class Widget(QtGui.QWidget,fm_ui.Ui_Form):
                 if li.get('class') == ['channel']:
                     cid = li.get('cid')
                     cname = li.a.get_text()
-                    print(cid,cname)
                     action = QtGui.QAction(cname,self)
                     self.collectChannel.addAction(action)
                     collect[cid]=action
@@ -165,7 +164,6 @@ class Widget(QtGui.QWidget,fm_ui.Ui_Form):
             self.likeButton.setPixmap(QtGui.QPixmap("image/redheart.png"))
             self.like = 1
             num = num + 1
-        print(num)
         self.rednum.setText(str(num)) 
         url = "http://douban.fm/j/mine/playlist?type=" + t +"&sid=" + self.sid +"&channel=" + str(self.cnum) + "&from=mainsite"
         urllib.request.urlopen(url)
@@ -267,12 +265,14 @@ class Widget(QtGui.QWidget,fm_ui.Ui_Form):
                 self.currentChannel("华语HMz")
     def closeEvent(self,ev):
         self.songprocess.write("quit\n")
+        self.songprocess.waitForFinished(msecs=30000)
         ev.accept() 
             
 def main():
     app = QtGui.QApplication(sys.argv)
     widget = Widget()
     widget.show()
+    app.lastWindowClosed.connect(app.quit)
     sys.exit(app.exec_())
     
 if __name__ == "__main__":
