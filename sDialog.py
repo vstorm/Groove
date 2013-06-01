@@ -14,6 +14,7 @@ class sDialog(QtGui.QDialog,setting.Ui_Dialog):
         
     def initUi(self):
         self.setupUi(self)
+        self.setFixedSize(QtCore.QSize(400,350))
         self.glink.setText("<a href = 'http://wwww.baidu.com' >baidu</a>")
         self.dlink.setText("<a href= 'http://www.douban.com/people/lxiaofeng/'>小峰</a>")
         self.captchaurl_id = None
