@@ -6,7 +6,7 @@
 
 * python3-bs4
 
-* Qt
+* PyQt4
 
 ##截图
 <img src="http://i1299.photobucket.com/albums/ag72/vstormli/Groove_012_zpsd63460ff.png" />
