@@ -1,7 +1,7 @@
 import sys
 import os
 import fm_ui
-# import time
+import time
 import urllib.request       #python3
 import http.cookiejar       #python3
 from PyQt4 import QtCore,QtGui
@@ -221,6 +221,7 @@ class Widget(QtGui.QWidget,fm_ui.Ui_Form):
         self.nextsong()         
         song = self.s["url"]  
         self.songprocess.write("loadfile {0}\n".format(song))
+        time.sleep(1)
         self.song()
 #         self.repaint()
     @QtCore.pyqtSlot(int)
