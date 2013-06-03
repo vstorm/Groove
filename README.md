@@ -9,7 +9,6 @@
 * PyQt4
 
 ##截图
-<img src="http://i1299.photobucket.com/albums/ag72/vstormli/Groove_012_zpsd63460ff.png" />
 <img src="http://i1299.photobucket.com/albums/ag72/vstormli/5DE54F5C533A1_011_zps1e2cfda7.png" />
 
 ##运行
@@ -23,7 +22,7 @@
 
 ##后续版本要增加的功能
 * 歌词
-* 完善收藏朝赫
+* 完善收藏兆赫
 
 ##Bug
 * 连续点击下一首，可能出现歌与歌曲信息不符合的情况
