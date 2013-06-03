@@ -21,7 +21,6 @@ class Ui_Dialog(object):
         self.setting = QtGui.QTabWidget(Dialog)
         self.setting.setGeometry(QtCore.QRect(10, 20, 371, 291))
         self.setting.setObjectName(_fromUtf8("setting"))
-        self.setting.setFixedSize(400,349)
 #         self.general = QtGui.QWidget()
 #         self.general.setObjectName(_fromUtf8("general"))
 #         self.setting.addTab(self.general, _fromUtf8(""))
