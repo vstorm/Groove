@@ -6,7 +6,7 @@
 
 * python3-bs4
 
-* python-PyQt4
+* python3-PyQt4
 
 ##截图
 <img src="http://i1299.photobucket.com/albums/ag72/vstormli/5DE54F5C533A1_011_zps1e2cfda7.png" />
